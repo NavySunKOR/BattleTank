@@ -75,3 +75,6 @@ Plugins/*/Intermediate/*
 
 # Cache files for the editor to use
 DerivedDataCache/*
+
+# Exclude Starter Content in this time!!!!! (Too much spaces)
+StarterContent/
