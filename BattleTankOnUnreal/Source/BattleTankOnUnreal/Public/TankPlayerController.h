@@ -19,5 +19,21 @@ public:
 	
 	
 	virtual void BeginPlay() override;
-	
+	virtual void Tick(float DeltaTime) override;
+
+private:
+	bool GetSightLineTrace(FVector& OutResult) const;
+	void AimToCrosshairs();
+
+	UPROPERTY(EditAnywhere)
+	float CrosshairXLocation = 0.5;
+	UPROPERTY(EditAnywhere)
+	float CrosshairYLocation = 0.5;
+
+	UPROPERTY(EditAnywhere)
+	float LineTranceRange = 1000000.0f;
+
+	bool GetLookVectorHitLocation(FVector LookDir, FVector& HitPos) const;
 };
+
+
